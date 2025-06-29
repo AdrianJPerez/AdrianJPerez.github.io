@@ -241,7 +241,7 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = { lat: 41.2565, lng: 1.7868 }; // Updated coordinates for Almiral de la Font
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -255,7 +255,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = { lat: 41.2565, lng: 1.7868 }; // Updated coordinates for Almiral de la Font
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
@@ -491,3 +491,34 @@ var MD5 = function (string) {
 
     return temp.toLowerCase();
 };
+
+function startCountdown(targetDate) {
+    const countdownElement = document.getElementById('countdown-timer');
+
+    function updateCountdown() {
+        const now = new Date();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+            countdownElement.innerHTML = "The big day is here!";
+            clearInterval(interval);
+            return;
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+}
+
+// Initialize the countdown
+document.addEventListener('DOMContentLoaded', function () {
+    const weddingDate = new Date('2026-04-24T00:00:00'); // Set your target date here
+    startCountdown(weddingDate);
+});

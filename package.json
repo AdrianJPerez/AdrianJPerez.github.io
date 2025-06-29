@@ -15,7 +15,7 @@
     "template",
     "website template"
   ],
-  "author": "Ram Patra",
+  "author": "Adrian Perez",
   "license": "GPL-3.0",
   "homepage": "https://github.com/rampatra/wedding-website",
   "devDependencies": {
@@ -23,10 +23,11 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.25.0"
+    "sass": "^1.85.0"
   },
   "dependencies": {
     "animate.css": "^3.7.2",
+    "bootstrap": "^3.4.1",
     "font-awesome": "^4.7.0",
     "waypoints": "^4.0.1"
   }
