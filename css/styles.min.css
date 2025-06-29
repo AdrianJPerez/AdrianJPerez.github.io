@@ -72,3 +72,20 @@
 .events, #map {
     background-color: #61474722; /* Warm beige with a hint of red */
 }
+
+@media (max-width: 576px) {
+    .countdown-timer-container {
+        flex-direction: column; /* Stack countdown blocks vertically */
+        gap: 20px; /* Reduce spacing between blocks */
+    }
+
+    .countdown-block {
+        width: 100%; /* Make blocks take full width */
+        font-size: 20px; /* Adjust font size for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .countdown-label {
+        font-size: 14px; /* Adjust label font size */
+    }
+}
