@@ -906,6 +906,30 @@ RSVP form
 }
 
 /* ==========================================================================
+Countdown Timer
+========================================================================== */
+.countdown-timer-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em; // Add spacing between blocks
+}
+
+.countdown-block {
+  text-align: center;
+  width: auto; // Ensure blocks don't stretch unnecessarily
+  padding: 1em;
+  border: 1px solid #ccc; // Optional: Add a border for better visibility
+  border-radius: 5px; // Optional: Add rounded corners
+}
+
+@media (max-width: 768px) {
+  .countdown-timer-container {
+    flex-direction: column; // Stack blocks vertically
+    align-items: center; // Center blocks horizontally
+  }
+}
+
+/* ==========================================================================
 Footer
 ========================================================================== */
 footer {
