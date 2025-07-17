@@ -916,7 +916,7 @@ Countdown Timer
 
 .countdown-block {
   text-align: center;
-  width: 150px; // Fixed width for consistency
+  width: 100px; // Fixed width for consistency
   padding: 1em;
   border: 1px solid #ccc; // Optional: Add a border for better visibility
   border-radius: 5px; // Optional: Add rounded corners
@@ -930,7 +930,7 @@ Countdown Timer
 
   .countdown-block {
     margin: 0 auto 1em; // Center each block and add spacing
-    width: 150px; // Ensure consistent width for all blocks
+    width: 50px; // Ensure consistent width for all blocks
   }
 }
 
