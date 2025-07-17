@@ -911,12 +911,12 @@ Countdown Timer
 .countdown-timer-container {
   display: flex;
   justify-content: center;
-  gap: 1em; // Add spacing between blocks
+  gap: 1em; // Default spacing between blocks
 }
 
 .countdown-block {
   text-align: center;
-  width: auto; // Ensure blocks don't stretch unnecessarily
+  width: 150px; // Fixed width for consistency
   padding: 1em;
   border: 1px solid #ccc; // Optional: Add a border for better visibility
   border-radius: 5px; // Optional: Add rounded corners
@@ -924,8 +924,13 @@ Countdown Timer
 
 @media (max-width: 768px) {
   .countdown-timer-container {
-    flex-direction: column; // Stack blocks vertically
-    align-items: center; // Center blocks horizontally
+    display: block; // Switch to block layout
+    text-align: center; // Center the container
+  }
+
+  .countdown-block {
+    margin: 0 auto 1em; // Center each block and add spacing
+    width: 150px; // Ensure consistent width for all blocks
   }
 }
 
