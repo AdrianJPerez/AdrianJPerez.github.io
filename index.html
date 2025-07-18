@@ -41,14 +41,18 @@
             document.getElementsByTagName('head')[0].appendChild(link);
         }
 
-        // load js files from CDN if local node_modules fail
-        function loadJsFromCDN(js) {
+       // load js files from CDN if local node_modules fail
+       function loadJsFromCDN(js) {
+            const script = document.createElement('script');
             if (js === 'waypoints.js') {
-                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+                script.src = "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js";
             } else if (js === 'jquery.js') {
-                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+                script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js";
             }
+            // Append the script to the document body
+            document.body.appendChild(script);
         }
+
     </script>
 
     <link rel="stylesheet" href="css/normalize.min.css">
@@ -251,7 +255,8 @@
                     <br class="hide-on-mobile"> 
                     <br class="hide-on-mobile"> 
                     <br class="hide-on-mobile"> 
-                    <br class="hide-on-mobile"> 
+                    <br class="hide-on-mobile">
+                    <br class="hide-on-mobile">  
                 </div>
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12 middlecol">
@@ -331,11 +336,11 @@
 
 <section id="Venue" class="section-padding">
     <div class="container">
-        <div class=wp7>
+        <div class="wp7">
             <div class="col-md-12 text-center">
                 <h3 style="font-size: 2em; font-family: Ciznel">The Venue</h3>
                 <br>
-                <p style="font-size: 1.26em;" class=wp7>
+                <p style="font-size: 1.26em;">
                     Almiral De La Font is what is known in Catalunya as a “masia”, namely a Catalan
                     farmhouse. The property has always been and still is actively farmed; the land around
                     Almiral produces white “Xarello” grapes frequently used in Freixenet and Cordoniu cavas
@@ -464,7 +469,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol wp3">
                 <div class="wp3">
                     <h3>Passports</h3>
                     <p>Please check your passports ASAP, you are required to have 3 months of passport validity beyond your date of departure. It can take 4-6 weeks for renewals.</p>
@@ -481,8 +486,8 @@
                     <br> <br> <br>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                <div class="wp5">
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol wp4">
+                <div class="wp4">
                     <h3>Transportation</span></h3>
                     <h5>Train</h5>
                     <p>
@@ -557,7 +562,7 @@
             <div class="col-md-12">
                 <h3 class="header" style="font-size: 2em; font-family: Ciznel">Hotels</h3>
                 <p style="font-size: 1.4em;"> We recommend booking your hotel before 2026 for best pricing. 
-                    Below are our top 3 recommendations based on value, location, and reviews. The wedding bus pickup/dropoff will be along the most booked hotels along Passeig Maririm road.
+                    Below are our top 3 recommendations based on value, location, and reviews; click the image to visit their website and book. The wedding bus pickup/dropoff will be along the most booked hotels along Passeig Maririm road.
                     The bus cannot go through side roads so you may have to walk a few minutes if you choose another option not on Maririm. You are not limited to the listed hotels however we do
                     highly recommend you stay in Sitges for the duration of the celebration. </p>
             </div>
@@ -587,28 +592,33 @@
         <div class="row">
             <div class="col-md-4 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
-                    <p class="text-center"><strong style="font-size: 1.5em;"><a href="https://mimhotels.com/en/sitges/hotel-mim-sitges?gad_source=1&gad_campaignid=849139400&gbraid=0AAAAADLTVihvFawy0_oPjUwi3CB5WonjR&gclid=CjwKCAjwprjDBhBTEiwA1m1d0p8U2sQkIWRT10qH1t4z2EJnwemjOvnIc4A_jN0gOk1zuFMHDH_rIhoCMOkQAvD_BwE" target="_blank">MIM</a></strong></p>
+                    <p class="text-center"><strong style="font-size: 1.5em;"><a href="https://mimhotels.com/en/sitges/hotel-mim-sitges" target="_blank">MIM</a></strong></p>
+                    <a href="https://mimhotels.com/en/sitges/hotel-mim-sitges" target="_blank">
+                        <img src="img/mim2.jpg" alt="Hotel MIM" class="img-responsive">
+                    </a>
                     <p>4.5-star hotel with a rooftop pool and spa, located a short walk from the beach. Very easy walk to shop/restaurants and just a 10 minute walk from train station.</p>
-                    
-                    <img src="img/mim.jpg" alt="Hotel MIM" class="img-responsive hidden-xs">
                 </div>
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12 middlecol">
                 <div class="wp3">
                     <p class="text-center"><strong style="font-size: 1.5em;"><a href="https://www.hotelcalipolis.com/en/" target="_blank">Calipolis</a></strong></p>
+                    <a href="https://www.hotelcalipolis.com/en/" target="_blank">
+                        <img src="img/calipolis.png" alt="Hotel Calipolis" class="img-responsive">
+                    </a>
                     <p>4-star beachfront hotel in the heart of Sitges with a sea view for almost all rooms.
-                       Located near MIM with with similar short walk to shops, restaurants, & train station. Discount code TBD.
-                    </p>                  
-                    <img src="img/calipolis.jpg" alt="Hotel Calipolis" class="img-responsive hidden-xs" style="margin-left: 1.5em;">
+                       Located near MIM with similar short walk to shops, restaurants, & train station. Discount code TBD.
+                    </p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
                     <p class="text-center"><strong style="font-size: 1.5em;"><a href="https://hotelsitges.com/hotel-platjador/" target="_blank">Platjador</a></strong></p>
+                    <a href="https://hotelsitges.com/hotel-platjador/" target="_blank">
+                        <img src="img/platjador2.jpg" alt="Hotel Platjador" class="img-responsive">
+                    </a>
                     <p>3-star hotel located across the beach with a rooftop terrace and pool. Great value hotel with fantastic breakfast and views; only a 5 minute walk to pickup point.</p>
-                    <img src="img/platjador.png" alt="Hotel Platjador" class="img-responsive hidden-xs">
                 </div>
-            </div>    
+            </div>
         </div>
     </div>
 </section>
@@ -619,7 +629,7 @@
             <div class="col-md-12 text-center">
                 <h3 style="font-size: 2em; font-family: Ciznel"><a href="https://withjoy.com/adrian-and-lianna/registry" target="_blank">Registry</a></h3>
                 <br>
-                <p style="font-size: 1.4em;">We are grateful for your presence at our wedding. If you'd like to contribute, please click Registry above to access it</p>
+                <p style="font-size: 1.4em;">We are grateful for your presence at our wedding. If you'd like to contribute, please click Registry above to access it.</p>
             </div>
         </div>
     </div>
@@ -680,7 +690,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                <i class="fa fa-key"></i><input type="text" name="invite_code" id="invite_code"
                                                                 class="" min="0"
                                                                 placeholder="Invite code"
                                                                 required>

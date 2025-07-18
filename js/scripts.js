@@ -214,7 +214,7 @@ $(document).ready(function () {
     
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
     
-        if (inviteCode !== '042426' && inviteCode !== '42426') {
+        if (!['042426', '42426'].includes(inviteCode)) {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             var data = $(this).serialize();
