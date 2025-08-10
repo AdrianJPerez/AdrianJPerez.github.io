@@ -136,17 +136,55 @@
     background-repeat: no-repeat;
     background-position: right 15px center;
 }
-.rsvp .rsvp-form .form-input-group .rsvp-dropdown option {
-    color: #333;
-    background-color: #f9f9f9; /* Matches dropdown background */
-    padding: 10px; /* Adds space inside options */
+.rsvp .rsvp-form .form-input-group .custom-dropdown {
+    position: relative;
+    width: 100%;
+    height: 55px; /* Matches form-input-group height */
 }
-.rsvp .rsvp-form .form-input-group .rsvp-dropdown option[disabled] {
-    color: #bcc1c3; /* Lighter header */
+
+.rsvp .rsvp-form .form-input-group .selected-option {
+    padding: 15px 0 15px 60px;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 13px;
+    border: 1px solid #e6e9ea;
+    height: 100%;
     background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%238b7d6b" d="M2 4l4 4 4-4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
 }
-.rsvp .rsvp-form .form-input-group .rsvp-dropdown option:hover {
-    background-color: #f0f0f0; /* Hover effect */
+
+.rsvp .rsvp-form .form-input-group .selected-option:hover {
+    background-color: #f0f0f0;
+}
+
+.rsvp .rsvp-form .form-input-group .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #e6e9ea;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.rsvp .rsvp-form .form-input-group .dropdown-list li {
+    padding: 10px 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+.rsvp .rsvp-form .form-input-group .dropdown-list li:hover {
+    background-color: #f0f0f0;
 }
 
 footer .content{border-top:1px solid #e6e9ea;padding-bottom:20px}footer .to-top-wrapper{font-size:30px;display:block;cursor:pointer;margin:-25px auto 50px;border-radius:50%;width:50px;height:50px;border:1px solid #e6e9ea;background:#fff}footer .to-top-wrapper .to-top{display:block;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}footer .to-top-wrapper .to-top:hover{margin-top:-5px}footer span.fa-heart{color:#ff415c;font-size:18px;margin:0 2px}body.modal-open{padding-right:0 !important}.modal-body{padding:25px}
